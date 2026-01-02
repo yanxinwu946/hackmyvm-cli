@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmv-cli"
+version = "1.0.0"
+description = "HackMyVM CLI Toolkit for managing machines, writeups, and achievements"
+authors = [
+    {name = "Sublarge"},
+]
+readme = "README.md"
+dependencies = [
+    "requests>=2.25.0",
+    "beautifulsoup4>=4.9.0",
+    "prettytable>=3.0.0",
+    "colorama>=0.4.0",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/Yanxinwu946/hackmyvm-cli"
+Repository = "https://github.com/Yanxinwu946/hackmyvm-cli"
+Issues = "https://github.com/Yanxinwu946/hackmyvm-cli/issues"
+
+[project.scripts]
+hmv = "hmv:main"
+
+[tool.setuptools]
+packages = ["hmv", "hmv.modules"]
+
+[tool.setuptools.package-dir]
+"" = "."
